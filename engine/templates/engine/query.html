@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+
+    {% load static %}
+
+    <title>Lawyer Recommender</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Kapil Chandorikar, Aditya Patil, Devyani Kulkarni, Mustafa Qazi, Prabhleen Bindra">
+    <link rel="stylesheet" href="{% static 'engine/styles/bootstrap.min.css' %}">
+    <!--<link rel="stylesheet" href="./styles/index.css">-->
+    <script src="{% static 'engine/scripts/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'engine/scripts/bootstrap.min.js' %}"></script>
+    <style>
+        .hj {
+            background-color: #424242;
+            color: white;
+        }
+
+        .hpp {
+            margin: 1em;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <div class="jumbotron jumbotron-fluid hj">
+        <div class="container">
+            <h1 class="display-4">Lawer Recommender</h1>
+            <p class="lead">Data Science Lab Assignment No 10. </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card" style="width: 65rem;">
+            <div class="row">
+                <div class="col">
+                    <img class="card-img-top hpp" src="{% static 'engine/images/hr.jpg' %}" alt="Card image cap">
+                </div>
+                <div class="col">
+                    <div class="card-body">
+                        <h5 class="card-title">Find me a suitable lawyer!</h5>
+                        <p class="card-text">Please select the proficiency level for the case type and we'll recommend you the best 5 lawyers for your requirement.</p>
+                        <form>
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="">Civil Cases</label>
+                                        <select class="form-control form-control-sm">
+                                      <option>0</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                </select>
+                                        <label for="">Criminal Cases</label>
+                                        <select class="form-control form-control-sm">
+                                      <option>0</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                </select>
+                                        <label for="">Bail Applications</label>
+                                        <select class="form-control form-control-sm">
+                                      <option>0</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                </select>
+                                    </div>
+                                    <div class="col">
+                                        <label for="">Domestic violence / Family law</label>
+                                        <select class="form-control form-control-sm">
+                                      <option>0</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                </select>
+                                        <label for="">Annulment applications</label>
+                                        <select class="form-control form-control-sm">
+                                      <option>0</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                </select>
+                                        <label for="">Apprehended Violence Cases</label>
+                                        <select class="form-control form-control-sm">
+                                      <option>0</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <button type="submit" class="btn btn-primary">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+</body>
+
+</html>
